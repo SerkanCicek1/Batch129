@@ -1,7 +1,6 @@
 package advanced_practice.day10.okul;
 
 public class Ogrenci {
-
     private String ad;
     private String soyAd;
     private int yas;
@@ -38,5 +37,14 @@ public class Ogrenci {
 
     public void setYas(int yas) {
         this.yas = yas;
+    }
+
+    @Override
+    public String toString() {
+        return "Ogrenci{" +
+                "ad='" + ad + '\'' +
+                ", soyAd='" + soyAd + '\'' +
+                ", yas=" + yas +
+                '}';
     }
 }

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Okul {
-
     private String okulAdi;
     private int maxOgrenciSayisi;
     private List<Ogrenci> ogrenciListesi = new ArrayList();
@@ -16,7 +15,6 @@ public class Okul {
     }
 
     public Okul() {
-
     }
 
     public String getOkulAdi() {
@@ -41,6 +39,10 @@ public class Okul {
 
     public void setOgrenciListesi(List<Ogrenci> ogrenciListesi) {
         this.ogrenciListesi = ogrenciListesi;
+    }
+
+    public void addOgrenciToList(Ogrenci ogrenci){
+        this.ogrenciListesi.add(ogrenci);
     }
 
     @Override

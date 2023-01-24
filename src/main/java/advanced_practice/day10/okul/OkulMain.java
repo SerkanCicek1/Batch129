@@ -1,7 +1,5 @@
 package advanced_practice.day10.okul;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class OkulMain {
@@ -24,11 +22,40 @@ public class OkulMain {
         okul.setOkulAdi(scanner.nextLine());
         System.out.println("Maksimum öğreci sayısını giriniz");
         okul.setMaxOgrenciSayisi(scanner.nextInt());
-        List<Ogrenci> ogrenciListesi = new ArrayList<>();
 
-        for (int i = 0; i < okul.getMaxOgrenciSayisi(); i++) {
+        for (int i = 1; i <= okul.getMaxOgrenciSayisi(); i++) {
+            scanner.nextLine();//dummy scarrer
+            Ogrenci ogrenci = new Ogrenci();
+            System.out.println(i+". öğrenci ad:");
+            ogrenci.setAd(scanner.nextLine());
+            System.out.println(i+". öğrenci soyAd:");
+            ogrenci.setSoyAd(scanner.nextLine());
+            System.out.println(i+". öğrenci yaş:");
 
+            try {
+                ogrenci.setYas(scanner.nextInt());
+                if(ogrenci.getYas()<8||ogrenci.getYas()>15){
+                    throw new ArithmeticException();
+                }
+
+            }catch (ArithmeticException arithmeticException){
+
+                System.out.println("Öğrenci yaşı 8-15 aralığında olmalıdır");
+                i--;
+                continue;
+
+            }catch (Exception exception){
+
+                System.out.println("8-15 aralığında bir SAYI giriniz");
+                i--;
+                continue;
+
+            }
+
+            okul.addOgrenciToList(ogrenci);
 
         }
+        System.out.println(okul);
+
     }
 }
