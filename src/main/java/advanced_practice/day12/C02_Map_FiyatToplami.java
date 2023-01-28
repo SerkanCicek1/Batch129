@@ -2,10 +2,10 @@ package advanced_practice.day12;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class C02_Map_FiyatToplami {
-
     /*
    Bir map içerisinde verilen fiyatların toplamını bulan bir kod yazınız.(for each loop kullanınız)
    Örn: {Kemer=19.99, Gömlek=29.99, Ayakkabı=89.99, Kazak=24.99, Kravat=19.99} ==> Toplam: 184.95
@@ -20,7 +20,6 @@ public class C02_Map_FiyatToplami {
         urunlerFiyatlar.put("Kravat",19.99);
 
         System.out.println(fiyatToplami(urunlerFiyatlar));
-
     }
 
     public static double fiyatToplami(Map<String,Double> map){
@@ -33,12 +32,6 @@ public class C02_Map_FiyatToplami {
         for (double w:fiyatlar){
             toplam += w;
         }
-
-
         return toplam;
     }
-
-
-
-
 }
