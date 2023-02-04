@@ -53,6 +53,16 @@ public class Lambda03 {
                 collect(Collectors.toList());
         System.out.println(yourList);
 
+        // 6) Tum course object'lerini average score'a gore kucukten buyuge dizip ucuncuyu yazdiriniz
+        Course result3 = coursesList.
+                stream().
+                sorted(Comparator.comparing(Course::getAverageScore)).
+                skip(2).
+                limit(1).
+                findFirst().
+                get();
+        System.out.println(result3);
+
     }
 
 }
