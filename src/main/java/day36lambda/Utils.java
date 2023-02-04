@@ -6,7 +6,7 @@ public class Utils {
         return s.length()*s.length();
     }
 
-    public static boolean isEven(String s){
+    public static boolean isLengthEven(String s){
         return s.length()%2==0;
     }
 
@@ -16,6 +16,21 @@ public class Utils {
 
     public static void printInTheSameLineWithSpace(Object obj){
         System.out.println(obj + " ");
+    }
+
+    public static boolean isNumberEven(int x){
+        return x % 2 == 0;
+    }
+
+    public static int getSumOfDigits(int x){
+        int sum = 0;
+
+        while (x != 0){
+            sum += x % 10;
+
+            x = x / 10;
+        }
+        return sum;
     }
 
 }
