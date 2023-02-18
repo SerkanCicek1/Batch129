@@ -28,7 +28,6 @@ public class C01 {
             System.out.println("1. Harf: " + gunHarf1 + "\n2. Harf: " + gunHarf2 + "\n3. Harf: " + gunHarf3);
         } else System.out.println("Lutfen gecerli bir gun giriniz");
 
-
         //Example: Kullanicidan iki sayi isteyin, sayilarin ikisi de pozitif ise sayilarin toplamini yazdirin,
         //         sayilarin ikisi de negatif ise sayilarin carpimini yazdirin,
         //         sayilarin ikisi farkli farkli isaretlere sahipse "Farkli isaretlerde sayilarla islem yapamazsin" yazdirin,
